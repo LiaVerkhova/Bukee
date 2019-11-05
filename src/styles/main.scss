@@ -6,19 +6,28 @@
 @import "base/general";
 @import "../blocks/modules";
 
+$light-color: #fff;
+$accent-color: #65e496; 
 
 body {
     font-family: 'Roboto Slab', serif;
+}
+.wrap {
+    max-width: 1170px;
+    margin: 0 auto;
 }
 .page-main {
     background-image: url(../img/bg-main.png);
     background-repeat: no-repeat;
     background-size: cover;
+    color: $light-color;
 }
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1170px;
+    margin: 0 auto;
     &__logo {
         display: block;
         width: 137px;
@@ -31,6 +40,9 @@ body {
         justify-content: flex-end;
         &__item {
             margin-left: 15px;
+        }
+        &__item.active {
+            border-bottom: 3px solid $accent-color;
         }
     }
 }
