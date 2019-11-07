@@ -82,5 +82,8 @@ body {
         background-color: $accent-color;
         color: $light-color;
         text-decoration: none;
+        max-width: 250px;
+        border-radius: 3px;
+        text-align: center;
     }
 }
