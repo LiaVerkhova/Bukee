@@ -44,7 +44,7 @@ body {
             margin-left: 22px;
             padding-bottom: 5px;
             border-bottom: 3px solid transparent;
-            transition: 0,3s; 
+            transition: 0,5s; 
             &:hover {
                 border-bottom: 3px solid $accent-color;
             }
@@ -57,5 +57,30 @@ body {
             text-decoration: none;
             letter-spacing: 0,5px;
         }
+    }
+}
+.block-text {
+    &__name {
+        font-family: 'Open Sans', serif;
+        font-size: 18px;
+    }
+    &__title {
+        font-size: 48px;
+        font-weight: 700;
+        span {
+            display: block;
+            color: $accent-color;
+            font-size: 18px;
+        }
+    }
+    p {
+        font-family: 'Open Sans', serif;
+        font-size: 15px;
+    }
+    &__btn {
+        display: block;
+        background-color: $accent-color;
+        color: $light-color;
+        text-decoration: none;
     }
 }
