@@ -21,6 +21,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: $light-color;
+    padding-bottom: 50px;
 }
 .header {
     display: flex;
@@ -60,6 +61,7 @@ body {
     }
 }
 .block-text {
+    flex-basis: calc(93%-500px);
     &__name {
         font-family: 'Open Sans', serif;
         font-size: 18px;
@@ -67,15 +69,22 @@ body {
     &__title {
         font-size: 48px;
         font-weight: 700;
+        letter-spacing: 1.8px;
+        margin-bottom: 40px;
         span {
             display: block;
             color: $accent-color;
             font-size: 18px;
+            margin-top: 9px;
+            letter-spacing: 0.9px;
         }
     }
-    p {
+    &__description {
         font-family: 'Open Sans', serif;
         font-size: 15px;
+        line-height: 24px;
+        margin-bottom: 24px;
+        letter-spacing: 0.7px;
     }
     &__btn {
         display: block;
@@ -85,5 +94,22 @@ body {
         max-width: 250px;
         border-radius: 3px;
         text-align: center;
+        margin-top: 48px;
+        padding: 14px 0;
+        letter-spacing: 0.7px;
+        margin-bottom: 19px;
     }
 }
+.block-book {
+    display: flex;
+    justify-content: flex-start;
+    &-demo{
+        display: none;
+        width: 447px;
+        height: 643px;
+        background-image: url(../img/book.svg);
+        background-repeat: no-repeat;
+        flex-basis: 500px;
+    }
+          }
+
