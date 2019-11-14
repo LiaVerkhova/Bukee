@@ -72,6 +72,10 @@ body {
     &__name {
         font-family: 'Open Sans', serif;
         font-size: 18px;
+    &__name-top {
+        margin-top: 16px;
+        margin-left: 0;
+    }    
     }
     &__title {
         font-size: 48px;
@@ -119,7 +123,7 @@ body {
         flex-basis: 500px;
     }
           }
- .block-author {
+.block-author {
      display: flex;
      justify-content: space-between;
  }         
@@ -135,4 +139,18 @@ body {
         margin-right: 45px;
     }
 }          
-
+.block-counter {
+    display: flex;
+    justify-content: space-around;
+    p {
+        font-family: 'Open Sans', serif;
+        text-align: center;
+        span {
+            font-family: 'Roboto Slab', serif;
+            display: block;
+            font-weight: 100;
+            font-size: 80px;
+            color: $accent-color;
+        }
+    }
+}
