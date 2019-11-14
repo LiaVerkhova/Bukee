@@ -21,7 +21,12 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: $light-color;
-    padding-bottom: 50px;
+    padding-bottom: 120px;
+    
+    
+}
+.page {
+    padding-top: ;
 }
 .header {
     display: flex;
@@ -29,7 +34,8 @@ body {
     align-items: center;
     max-width: 1170px;
     margin: 0 auto;
-    padding-top: 38px;
+    padding-top: 44px;
+    padding-bottom: 160px;
     &__logo {
         display: block;
         width: 137px;
@@ -41,6 +47,7 @@ body {
         display: flex;
         justify-content: flex-end;
         font-family: 'Open Sans', serif;
+        padding-right: 31px;
         &__item {
             margin-left: 22px;
             padding-bottom: 5px;
@@ -61,7 +68,7 @@ body {
     }
 }
 .block-text {
-    flex-basis: calc(93%-500px);
+    flex-basis: calc(93% - 500px);
     &__name {
         font-family: 'Open Sans', serif;
         font-size: 18px;
@@ -84,7 +91,7 @@ body {
         font-size: 15px;
         line-height: 24px;
         margin-bottom: 24px;
-        letter-spacing: 0.7px;
+        letter-spacing: 0.75px;
     }
     &__btn {
         display: block;
@@ -104,12 +111,28 @@ body {
     display: flex;
     justify-content: flex-start;
     &-demo{
-        display: none;
+        display: block;
         width: 447px;
-        height: 643px;
-        background-image: url(../img/book.svg);
+        height: 639px;
+        background-image: url(../img/book.png);
         background-repeat: no-repeat;
         flex-basis: 500px;
     }
           }
+ .block-author {
+     display: flex;
+     justify-content: space-between;
+ }         
+.block-ava {
+    position: relative;
+    &__svg {
+        position: absolute;
+        right: 0;
+        z-index: -1;
+    }
+    &__img {
+        margin-top: 45px;
+        margin-right: 45px;
+    }
+}          
 
