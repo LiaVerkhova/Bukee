@@ -8,9 +8,21 @@
 
 $light-color: #fff;
 $accent-color: #65e496; 
+$bg-light-color: #f5f6fa;
+$bg-dark-color: #44444f;
+
 
 body {
     font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+    line-height: 24px;
+}
+h1, h2, h3, h4, p {
+    padding: 0;
+    margin: 0;
+}
+h3 {
+    font-size: 24px;
 }
 .wrap {
     max-width: 1170px;
@@ -21,13 +33,11 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: $light-color;
-    padding-bottom: 120px;
+    padding-bottom: 164px;
     
     
 }
-.page {
-    padding-top: ;
-}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -72,7 +82,7 @@ body {
     &__name {
         font-family: 'Open Sans', serif;
         font-size: 18px;
-    &__name-top {
+    &__name_top {
         margin-top: 16px;
         margin-left: 0;
     }    
@@ -96,6 +106,11 @@ body {
         line-height: 24px;
         margin-bottom: 24px;
         letter-spacing: 0.75px;
+       
+    }
+    small {
+        font-family: 'Open Sans', serif;
+        font-style: italic;
     }
     &__btn {
         display: block;
@@ -114,6 +129,7 @@ body {
 .block-book {
     display: flex;
     justify-content: flex-start;
+    padding-top: 20px;
     &-demo{
         display: block;
         width: 447px;
@@ -123,6 +139,26 @@ body {
         flex-basis: 500px;
     }
           }
+.page {
+    padding-top: 161px;
+    padding-bottom: 160px;
+    &_gray {
+        background-color: $bg-light-color;
+    }
+    &__title {
+        font-size: 48px;
+        text-align: center;
+        margin-bottom: 25px;
+        letter-spacing: 2px;
+    }
+    &__subtitle {
+        font-size: 18px;
+        color: $accent-color;
+        text-align: center;
+        letter-spacing: 0.9px;
+        
+    }
+}
 .block-author {
      display: flex;
      justify-content: space-between;
@@ -142,15 +178,107 @@ body {
 .block-counter {
     display: flex;
     justify-content: space-around;
+    margin-top: 152px;
     p {
         font-family: 'Open Sans', serif;
         text-align: center;
+        font-size: 18px;
         span {
             font-family: 'Roboto Slab', serif;
             display: block;
             font-weight: 100;
             font-size: 80px;
             color: $accent-color;
+            margin-bottom: 45px;
         }
     }
+}
+.block-about {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 82px;
+    h3 {
+        margin-bottom: 20px;
+    }
+   
+    &-text {
+        flex-basis: 41%;
+        &__desc {
+            font-family: 'Open Sans', serif;
+            letter-spacing: 0,6;
+            
+        }
+    }
+    &-table {
+        flex-basis: 49%;
+       
+        &__list {
+        padding: 0;
+        margin: 0;
+        counter-reset:list;
+        list-style-type: none;
+        column-count: 2;
+        &>li {
+            position: relative;
+            padding-left: 30px;
+            counter-increment:list;
+            margin-bottom: 8px;
+            letter-spacing: 0,7;
+            
+            &::before {
+                content: counter(list) ". ";
+            }
+            &::after {
+                content: "+";
+                position: absolute; 
+                font-size: 15px;
+                line-height: 22px;
+                left: 0;
+                top: 1px;
+                background-color: #5fc9b6;
+                color: $light-color;
+                padding: 0px 7px;
+            }
+        }
+        }
+        &__btn {
+            background-color: $accent-color;
+            border: none;
+            color: $light-color;
+            text-decoration: none;
+            border-radius: 3px;
+            text-align: center;
+            font-size: 18px;
+            margin-top: 28px;
+            padding: 14px 45px;
+            letter-spacing: 0.7px;
+            margin-bottom: 19px;
+
+        }
+    }
+
+    &-social {
+        display: flex;
+        align-items: center;
+        margin-top: 14px;
+        &__title {
+            font-family: 'Roboto Slab', serif;
+            font-size: 18px; 
+            font-weight: 700;
+            letter-spacing: 0.9px;
+         }
+         &__list {
+            list-style-type: none;
+            padding-left: 23px;
+            &>li {
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 18px;
+                margin-right: 12px;
+                &>a {
+                    color: $accent-color;
+                }
+            }
+         }
+     }
 }
