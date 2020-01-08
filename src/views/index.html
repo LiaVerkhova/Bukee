@@ -271,7 +271,19 @@
               <li>Consectetur adipisicing elit</li>
               <li>Labore et dolore magna</li>
             </ol>
-            <button class="block-about-table__btn">More</button>
+            <ol class="block-about-table__list block-about-table__list_next" id="nextContentsList" style="display: none;">
+              <li>Lorem ipsum dolor sit amet</li>
+              <li>Consectetur adipisicing elit</li>
+              <li>Labore et dolore magna</li>
+              <li>Consectetur adipisicing elit</li>
+              <li>Labore et dolore magna</li>
+              <li>Lorem ipsum dolor sit amet</li>
+              <li>Consectetur adipisicing elit</li>
+              <li>Labore et dolore magna</li>
+              <li>Consectetur adipisicing elit</li>
+              <li>Labore et dolore magna</li>
+            </ol>
+            <button id="nextContents" class="block-about-table__btn">More</button>
           </div>
         </div>
       </div>
@@ -356,7 +368,7 @@
       </div>
       <a href="" class="page__btn">Brows all books</a>
     </div>
-    <div class="pag page-carousel">
+    <div class="page page-carousel">
       <div class="wrap">
         <div class="block-carousel">
           <div>
@@ -394,7 +406,7 @@
           </div>
       </div>
       </div>
-      <svg class="page__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 849"><path d="M-1 0l802 61 799-61v789l-799 60-802-60V0z" fill="#44444f" fill-rule="evenodd"/></svg>
+      <svg class="page__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 849" height="849"><path d="M-1 0l802 61 799-61v789l-799 60-802-60V0z" fill="#44444f" fill-rule="evenodd"/></svg>
     </div>
     <div class="page">
       <div class="wrap">
@@ -536,9 +548,9 @@
         </div>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/vendor.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
       $(document).ready(function(){
@@ -546,6 +558,9 @@
         dots: true,
         arrows: false,
       });
+      });
+      $("nextContents").click(function(){
+      $("#nextContentsList").fadeIn();
       });
     </script>
   </body>

@@ -49,6 +49,9 @@ h3 {
   max-width: 1170px;
   margin: 0 auto;
   padding: 44px 15px 160px 15px;
+  @media (max-width: 920px) {
+    flex-direction: column;
+  }
   &__logo {
     display: block;
     width: 137px;
@@ -82,8 +85,14 @@ h3 {
 }
 .block-text {
   flex-basis: calc(93% - 500px);
+  @media (max-width: 1020px) {
+    flex-basis: calc(93% - 315px);
+  }
   &--width {
     flex-basis: calc(93% - 520px);
+    @media (max-width: 1020px) {
+      flex-basis: calc(93% - 315px);
+    }
   }
   &__name {
     font-family: "Open Sans", serif;
@@ -104,13 +113,13 @@ h3 {
     font-size: 48px;
     font-weight: 700;
     letter-spacing: 1.8px;
-    margin-bottom: 22px;
+    margin-bottom: 38px;
     span {
-      line-height: 53px;
+      line-height: 23px;
       display: block;
       color: $accent-color;
       font-size: 18px;
-      margin-top: -3px;
+      margin-top: 11px;
       letter-spacing: 0.9px;
       margin-left: 3px;
     }
@@ -222,6 +231,10 @@ h3 {
   padding-top: 161px;
   padding-bottom: 160px;
   position: relative;
+  @media (max-width: 1020px) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
   &_gray {
     background-color: $bg-light-color;
   }
@@ -258,6 +271,15 @@ h3 {
     top: 0;
     width: 100%;
     z-index: -1;
+    min-height: 694px;
+    @media (max-width: 1020px) {
+      display: none;
+    }
+  }
+  &-carousel {
+    @media (max-width: 1020px) {
+      background-color: $bg-dark-color;
+    }
   }
 }
 .block-author {
@@ -270,6 +292,10 @@ h3 {
     position: absolute;
     right: 0;
     z-index: -1;
+    @media (max-width: 1020px) {
+      width: 300px;
+      height: 412px;
+    }
   }
   &__svg--left {
     right: inherit;
@@ -278,6 +304,9 @@ h3 {
   &__img {
     margin-top: 45px;
     margin-right: 45px;
+    @media (max-width: 1020px) {
+      width: 300px;
+    }
   }
   &__img--left {
     margin-top: 49px;
@@ -290,10 +319,16 @@ h3 {
   justify-content: space-around;
   margin-top: 211px;
   margin-left: 44px;
+  @media (max-width: 750px) {
+    flex-direction: column;
+  }
   p {
     font-family: "Open Sans", serif;
     text-align: center;
     font-size: 18px;
+    @media (max-width: 750px) {
+      margin-bottom: 80px;
+    }
     span {
       font-family: "Roboto Slab", serif;
       display: block;
@@ -308,12 +343,20 @@ h3 {
   display: flex;
   justify-content: space-between;
   margin-top: 82px;
+  @media (max-width: 1020px) {
+    max-width: 750px;
+    margin: 82px auto 0;
+    flex-direction: column;
+  }
   h3 {
     margin-bottom: 20px;
   }
 
   &-text {
-    flex-basis: 41%;
+    flex-basis: calc(100% - 690px);
+    @media (max-width: 1020px) {
+      flex-basis: 100%;
+    }
     h3 {
       letter-spacing: 1.2px;
     }
@@ -323,7 +366,11 @@ h3 {
     }
   }
   &-table {
-    flex-basis: 49%;
+    flex-basis: 576px;
+    @media (max-width: 1020px) {
+      flex-basis: 100%;
+      margin-top: 40px;
+    }
     h3 {
       margin-bottom: 28px;
       letter-spacing: 1.3px;
@@ -335,6 +382,7 @@ h3 {
       counter-reset: list;
       list-style-type: none;
       column-count: 2;
+      column-gap: 19px;
       & > li {
         position: relative;
         padding-left: 30px;
@@ -351,12 +399,15 @@ h3 {
           font-size: 15px;
           line-height: 22px;
           left: 0;
-          top: 1px;
+          top: calc(50%-11px);
           background-color: #5fc9b6;
           color: $light-color;
           padding: 0px 7px;
         }
       }
+    }
+    &__list_next {
+      counter-reset: list 10;
     }
     &__btn {
       background: linear-gradient(to top left, #65e49c, #65e4af);
@@ -402,22 +453,25 @@ h3 {
 .block-product {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
+  margin-top: 85px;
   &-item {
-    flex-basis: 30%;
+    text-align: center;
     &-demo {
       background-image: url(../img/book_small.png);
       display: block;
+      margin: 0 auto 35px;
       position: relative;
       width: 269px;
       height: 409px;
+      flex-basis: 500px;
       background-repeat: no-repeat;
       &__title {
         font-size: 24px;
+        color: #fff;
         text-transform: uppercase;
-        letter-spacing: 1.4px;
+        letter-spacing: 0.9px;
         position: absolute;
-        left: 88px;
+        left: 71px;
         top: 71px;
         span {
           font-size: 12px;
@@ -443,20 +497,40 @@ h3 {
     display: block;
     flex-basis: 30%;
     h3 {
-      margin-top: 34px;
-      margin-left: 80px;
-      letter-spacing: 0.9px;
+      margin-bottom: 17px;
     }
     p {
+      font-size: 15px;
+      max-width: 316px;
+      letter-spacing: 0.7px;
+      margin-bottom: 17px;
     }
+  }
+  a {
+    font-size: 15px;
+    color: #65e496;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    border-bottom: 3px solid transparent;
+    padding-bottom: 5px;
+    transition: 0.3s;
   }
 }
 .block-blog {
   display: flex;
   justify-content: space-between;
   margin-top: 84px;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    max-width: 600px;
+    margin: 85px auto 0;
+  }
   &-item {
-    margin-left: 13px;
+    flex-basis: 32%;
+    @media (max-width: 900px) {
+      margin-bottom: 40px;
+    }
   }
 
   h4 {
@@ -465,12 +539,12 @@ h3 {
     letter-spacing: 0.9px;
   }
   &-img {
-    width: 369px;
+    width: 100%;
     height: 224px;
     overflow: hidden;
     position: relative;
     img {
-      width: 369px;
+      width: 100%;
       height: 224px;
       position: absolute;
       left: 50%;
@@ -482,6 +556,7 @@ h3 {
   &-info {
     font-size: 15px;
     display: flex;
+    flex-wrap: wrap;
 
     a {
       color: $accent-color;
