@@ -410,7 +410,7 @@
     </div>
     <div class="page">
       <div class="wrap">
-      <div class="block-author">
+      <div class="block-author block-author_revers">
         <div class="block-ava">
             <svg class="block-ava__svg block-ava__svg--left" width="435" height="704">
               <linearGradient
@@ -559,8 +559,9 @@
         arrows: false,
       });
       });
-      $("nextContents").click(function(){
+      $("#nextContents").click(function(){
       $("#nextContentsList").fadeIn();
+      $("#nextContents").hide();
       });
     </script>
   </body>
